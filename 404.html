@@ -1,11 +1,12 @@
 <html>
 <head>
 <title>Lewes Rowing Club Homepage redirection (404)</title>
-<script type="text/javascript">
+<script type="text/javascript">  
 document.addEventListener("DOMContentLoaded", () => {
 const url = "https://membermojo.co.uk/lewesrowingclub/membershome" + window.location.pathname + window.location.search + window.location.hash;
 alert("REDIRECT: " + window.location.href + " ==> " + url);
 document.getElementById("link").setAttribute("href", url);
+// window.location.replace(url);
 });
 </script>
 </head>

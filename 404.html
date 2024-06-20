@@ -3,8 +3,9 @@
 <title>Lewes Rowing Club Homepage redirection (404)</title>
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", () => {
-alert("REDIRECT: " + window.location.href);
-document.getElementById("link").setAttribute("href", window.location.href);
+const url = "https://membermojo.co.uk/lewesrowingclub/membershome" + window.location.pathname + window.location.search + window.location.hash;
+alert("REDIRECT: " + window.location.href + " ==> " + url);
+document.getElementById("link").setAttribute("href", url);
 });
 </script>
 </head>

@@ -1,18 +1,18 @@
 <html>
 <head>
 <title>Lewes Rowing Club Homepage redirection</title>
-<meta http-equiv="refresh" content="0; url=https://membermojo.co.uk/lewesrowingclub/membershome">
+<!-- meta http-equiv="refresh" content="0; url=https://membermojo.co.uk/lewesrowingclub/membershome" -->
 <script type="text/javascript">
-function redirect(fromUser) {
-if (fromUser) {
-window.location.href = "https://membermojo.co.uk/lewesrowingclub/membershome";
-// window.location.assign("https://membermojo.co.uk/lewesrowingclub/membershome");
-} else {
-window.location.replace("https://membermojo.co.uk/lewesrowingclub/membershome");  
-}
-}
+// + window.location.pathname
+const url = "https://membermojo.co.uk/lewesrowingclub/membershome" + window.location.search + window.location.hash;
 document.addEventListener("DOMContentLoaded", () => {
-redirect(false);
+document.getElementById("link").setAttribute("href", url);
+if (window.location.replace) {
+window.location.replace(url);
+} else {
+// window.location.assign(url);
+window.location.href = url;
+}
 });
 </script>
 </head>
@@ -20,7 +20,7 @@ redirect(false);
 <h2>Redirecting to the LRC MemberMojo website ...</h2>
 <p>
 <!-- button onclick="redirect(true)">Click here if you are not redirected automatically</button -->
-<a href="https://membermojo.co.uk/lewesrowingclub/membershome">Click here if you are not redirected automatically</a>
+<a id="link" href="xxx">Click here if you are not redirected automatically</a>
 </p>
 </body>
 </html>

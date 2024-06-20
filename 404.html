@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Lewes Rowing Club Homepage redirection (404)</title>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", () => {
+alert("REDIRECT: " + window.location.href);
+window.getElementById("url1").innerText = window.location.href;
+window.getElementById("url2").innerText = window.location.href;
+window.getElementById("url2").setAttribute("href", window.location.href);
+});
+</script>
+</head>
+<body style="font-family: Arial, Sans; font-size: 2em; text-align: center; margin: 0; padding: 1em;">
+<h2>Redirecting to <u id="url1">xxx</u> ...</h2>
+<p>You should be redirected automatically, otherwise click below:</p>
+<!-- button onclick="redirect(true)">Redirect</button -->
+<a id="url2" href="xxx">xxx</a>
+</body>
+</html>

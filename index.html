@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Lewes Rowing Club Homepage redirection</title>
+<meta http-equiv="refresh" content="0; url=https://membermojo.co.uk/lewesrowingclub/membershome">
+<script type="text/javascript">
+function redirect(fromUser) {
+alert("Will redirect to https://membermojo.co.uk/lewesrowingclub/membershome ...");
+if (fromUser) {
+window.location.href = "https://membermojo.co.uk/lewesrowingclub/membershome";
+// window.location.assign("https://membermojo.co.uk/lewesrowingclub/membershome");
+} else {
+window.location.replace("https://membermojo.co.uk/lewesrowingclub/membershome");  
+}
+}
+document.addEventListener("DOMContentLoaded", () => {
+redirect(false);
+});
+</script>
+</head>
+<body style="font-family: Arial, Sans; font-size: 2em; text-align: center; margin: 0; padding: 1em;">
+<h2>Redirecting to <u>https://membermojo.co.uk/lewesrowingclub/membershome</u> ...</h2>
+<p>You should be redirected automatically, otherwise click this button:</p>
+<button onclick="redirect(true)">Redirect</button>
+</body>
+</html>

@@ -3,10 +3,29 @@
 <title>Lewes Rowing Club Homepage redirection (404)</title>
 <script type="text/javascript">  
 document.addEventListener("DOMContentLoaded", () => {
-const url = "https://membermojo.co.uk/lewesrowingclub/membershome" + window.location.pathname + window.location.search + window.location.hash;
-alert("REDIRECT: " + window.location.href + " ==> " + url);
+const urlRoot = "https://membermojo.co.uk/lewesrowingclub";
+let url = urlRoot + "/membershome" + window.location.pathname + window.location.search + window.location.hash;
+// if (
+// window.location.pathname == "/membershome"
+// || window.location.pathname == "/home"
+// || window.location.pathname == "/boats"
+// || window.location.pathname == "/lockers"
+// || window.location.pathname == "/outboards"
+// || window.location.pathname == "/minutes"
+// || window.location.pathname == "/fees"
+// || window.location.pathname == "/stats"
+// ) {
+// url = urlRoot + "/membershome" + window.location.search + window.location.hash;
+// }
+url = urlRoot + "/membershome";
+// alert("REDIRECT: " + window.location.href + " ==> " + url);
 document.getElementById("link").setAttribute("href", url);
-// window.location.replace(url);
+if (window.location.replace) {
+window.location.replace(url);
+} else {
+// window.location.assign(url);
+window.location.href = url;
+}
 });
 </script>
 </head>
